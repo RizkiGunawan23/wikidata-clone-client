@@ -2,7 +2,9 @@ import { createBrowserRouter } from "react-router-dom"; // 👈 FIX: tambah -dom
 import PublicRoute from "./PublicRoute";
 import LoginPage from "../pages/LoginPage";
 import ProtectedRoute from "./ProtectedRoute";
-import DashboardPage from "../pages/DashboardPage";
+import SearchPage from "../pages/SearchPage";
+import Layout from "../components/layout/Layout";
+import HomePage from "../pages/HomePage";
 
 export const router = createBrowserRouter([
     {
@@ -16,9 +18,9 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: (
-            <ProtectedRoute>
-                <DashboardPage />
-            </ProtectedRoute>
+            <Layout>
+                <HomePage />
+            </Layout>
         ),
     },
 ]);
